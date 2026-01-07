@@ -29,7 +29,7 @@ function App() {
       id: "output",
       type: "outputNode",
       position: { x: 400, y: 100 },
-      data: response,
+      data: { value: prompt },
     },
   ];
 
