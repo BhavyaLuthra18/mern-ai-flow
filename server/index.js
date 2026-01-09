@@ -1,16 +1,31 @@
 import express from "express";
 import cors from "cors";
+import dotenv from "dotenv";
+import mongoose from "mongoose";
+import airoutes from "./routes/aiFlowRoutes.js";
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
+dotenv.config();
+// console.log("API KEY:", process.env.OPENROUTER_API_KEY);
+
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.error("MongoDB error:", err));
+
 app.get("/", (req, res) => {
   res.send("Backend is running");
 });
 
-const Port = 5000;
-app.listen(Port, () => {
-  console.log(`Server is running on port ${Port}`);
+// API Routes
+app.use("/api", airoutes);
+
+const port = 5000;
+
+app.listen(port, () => {
+  console.log(`🚀 Server running on http://localhost:${port}`);
 });
