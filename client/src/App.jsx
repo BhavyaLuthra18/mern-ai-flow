@@ -16,6 +16,7 @@ const nodeTypes = {
 function App() {
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
+  const [loading, setLoading] = useState(false);
 
   // creation of nodes and edges
   const nodes = [
@@ -29,7 +30,7 @@ function App() {
       id: "output",
       type: "outputNode",
       position: { x: 400, y: 100 },
-      data: { value: response },
+      data: { value: response, loading },
     },
   ];
 
@@ -42,16 +43,31 @@ function App() {
     },
   ];
 
-  const handleRunFlow = () => {
-    if (!prompt.trim()) return;
-    setResponse(`AI Says: ${prompt}`);
+  const handleRunFlow = async () => {
+    if (!prompt) return;
+    setResponse("");
+    setLoading(true);
+
+    const res = await fetch("http://localhost:5000/api/ask-ai", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ prompt }),
+    });
+    const data = await res.json();
+
+    setResponse(data.answer);
+    setLoading(false);
   };
 
   return (
     <>
       <div style={{ width: "100vw", height: "100vh" }}>
         <div style={{ padding: 10, left: 50, top: 10 }}>
-          <button onClick={handleRunFlow}>Run Flow</button>
+          <button onClick={handleRunFlow}>
+            {loading ? "Running..." : "Run Flow"}
+          </button>
         </div>
         <ReactFlow nodes={nodes} edges={edges} nodeTypes={nodeTypes} />
       </div>

@@ -1,4 +1,5 @@
 import { Handle, Position } from "@xyflow/react";
+import ReactMarkdown from "react-markdown";
 
 function OutputNode({ data }) {
   return (
@@ -13,16 +14,12 @@ function OutputNode({ data }) {
       }}
     >
       <strong>Output</strong>
-      <div
-        style={{
-          marginTop: 8,
-          minHeight: 40,
-          fontSize: 14,
-          whiteSpace: "pre-wrap",
-        }}
-      >
-        {data.value || "No output yet."}
-      </div>
+
+      {data.loading ? (
+        <div style={{ marginTop: 8 }}>⏳Generating...</div>
+      ) : (
+        <ReactMarkdown>{String(data.value || "No response.")}</ReactMarkdown>
+      )}
 
       {/**Input handle */}
       <Handle type="target" position={Position.Left} />
