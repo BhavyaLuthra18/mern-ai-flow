@@ -5,21 +5,34 @@ function OutputNode({ data }) {
   return (
     <div
       style={{
-        padding: 10,
-        border: "1px solid #555",
-        borderRadius: 5,
-        width: 220,
-        color: "#111",
-        background: "#f9f9f9",
+        width: "240px",
+        maxHeight: "200px",
+        background: "#fff",
+        color: "#000",
+        borderRadius: "8px",
+        padding: "10px",
+        fontSize: "14px",
+        boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
+        border: "1px solid #ddd",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
       <strong>Output</strong>
-
-      {data.loading ? (
-        <div style={{ marginTop: 8 }}>⏳Generating...</div>
-      ) : (
-        <ReactMarkdown>{String(data.value || "No response.")}</ReactMarkdown>
-      )}
+      <div
+        className="output-scroll"
+        style={{
+          maxHeight: "210px",
+          overflowY: "auto",
+          paddingRight: "6px",
+        }}
+      >
+        {data.loading ? (
+          <div style={{ marginTop: 8 }}>⏳Generating...</div>
+        ) : (
+          <ReactMarkdown>{String(data.value || "No response.")}</ReactMarkdown>
+        )}
+      </div>
 
       {/**Input handle */}
       <Handle type="target" position={Position.Left} />

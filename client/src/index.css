@@ -66,3 +66,28 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Custom slick scrollbar for OutputNode */
+.output-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.output-scroll::-webkit-scrollbar-track {
+  background: rgba(180, 180, 200, 0.12);
+  border-radius: 10px;
+}
+
+.output-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4e8cff, #1e6fe8);
+  border-radius: 10px;
+}
+
+.output-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #6ea4ff, #3785fa);
+}
+
+/* Firefox support */
+.output-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #1e6fe8 rgba(180, 180, 200, 0.12);
+}

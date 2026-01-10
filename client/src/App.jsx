@@ -107,8 +107,8 @@ function App() {
         {/**----------Container----------- */}
         <div
           style={{
-            width: "65vw",
-            height: "65vh",
+            width: "70vw",
+            height: "70vh",
             display: "flex",
             flexDirection: "column",
             background: "rgba(40, 50, 60, 0.35)",
@@ -117,7 +117,7 @@ function App() {
             backdropFilter: "blur(6px)",
             padding: "18px",
             margin: "12px",
-            marginTop: "5vh",
+            marginTop: "2vh",
           }}
         >
           <h1
@@ -135,11 +135,40 @@ function App() {
           <div
             style={{
               flex: 1,
-              borderRadius: "8px",
-              overflow: "hidden",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "12px",
+              width: "100%",
+              height: "100%",
             }}
           >
-            <ReactFlow nodes={nodes} edges={edges} nodeTypes={nodeTypes} />
+            <div
+              style={{
+                width: "85%",
+                height: "100%",
+                background: "rgba(18, 24, 32, 0.35)",
+                border: "1px solid rgba(120,120,130,0.4)",
+                borderRadius: "10px",
+                overflow: "hidden",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <ReactFlow
+                nodes={nodes}
+                edges={edges}
+                nodeTypes={nodeTypes}
+                panOnScroll={false}
+                zoomOnScroll={false}
+                zoomOnPinch={false}
+                panOnDrag={false}
+                style={{
+                  marginLeft: "70px",
+                }}
+              />
+            </div>
           </div>
           {/*---------Buttons------------*/}
           <div
