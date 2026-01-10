@@ -1,12 +1,12 @@
 🧠 MERN AI Flow — Prompt → Response Flow App
 
-A visual AI flow builder where users can enter a prompt, receive an AI-generated response, and optionally save it to the database — all represented using a node-based UI via React Flow.
+A visual AI flow builder where users can enter a prompt, receive an AI-generated response, and optionally save it to the database — represented using a node-based UI via React Flow.
 
 🚀 Live Demo
 
-Frontend: https://mern-ai-flow-xi.vercel.app
+Frontend → https://mern-ai-flow-xi.vercel.app
 
-Backend API: https://mern-ai-flow-c4dn.onrender.com
+Backend API → https://mern-ai-flow-c4dn.onrender.com
 
 ✨ Features
 
@@ -18,18 +18,6 @@ Backend API: https://mern-ai-flow-c4dn.onrender.com
 ✔ Environment variable support
 ✔ Works on Vercel + Render
 
-🎬 Demo Preview
-
-Below is an example flow showing prompt → AI response → save action.
-
-🟦 Step 1 — Enter Prompt
-
-🟨 Step 2 — AI is generating response
-
-🟩 Step 3 — Response ready + Save option
-
-(MongoDB storage screenshot intentionally excluded for privacy)
-
 🖥️ Tech Stack
 Frontend
 
@@ -39,7 +27,7 @@ React Flow
 
 React Toastify
 
-Vercel Hosting
+Hosted on Vercel
 
 Backend
 
@@ -51,7 +39,7 @@ OpenRouter AI API
 
 CORS
 
-Render Hosting
+Hosted on Render
 
 Database
 
@@ -59,53 +47,46 @@ MongoDB Atlas (Cloud)
 
 📂 Folder Structure
 mern-ai-flow/
- ├── client/          # React frontend
- ├── server/          # Node + Express backend
- └── assets/          # Screenshot assets for README
-      └── Demo/
+ ├── client/    # React frontend
+ └── server/    # Express backend
 
 📡 API Endpoints
 POST /api/ask-ai
 
-Send prompt → receive AI response
+Request:
 
-{
-  "prompt": "What is the purpose of life?"
-}
+{ "prompt": "explain what is git?" }
 
 POST /api/save-response
 
-Persist data to MongoDB
+Request:
 
-{
-  "prompt": "...",
-  "response": "..."
-}
+{ "prompt": "...", "response": "..." }
 
 🔐 Environment Variables
 Frontend (.env)
 VITE_API_BASE_URL=https://mern-ai-flow-c4dn.onrender.com
 
 Backend (.env)
-OPENROUTER_API_KEY=your_openrouter_key
+OPENROUTER_API_KEY=your_key
 MONGO_URI=your_mongodb_uri
 
 🛠️ Local Development Setup
 
-Clone the repository:
+Clone the repo:
 
 git clone https://github.com/BhavyaLuthra18/mern-ai-flow.git
 cd mern-ai-flow
 
 
-Install frontend:
+Run frontend:
 
 cd client
 npm install
 npm run dev
 
 
-Install backend:
+Run backend:
 
 cd ../server
 npm install
@@ -115,26 +96,16 @@ npm run dev
 Service	Platform
 Frontend	Vercel
 Backend	Render
-Database	MongoDB Atlas
-📦 Dependencies Overview
-Frontend
+DB	MongoDB Atlas
 
-react
+## 🎬 Demo Preview
+Below is an example flow showing prompt → AI response → save action.
 
-react-flow
+### 🟦 Step 1 — Enter Prompt
+![Stage 1](assets/Demo/mern-ai-flow-stage-1.jpeg)
 
-react-toastify
+### 🟨 Step 2 — AI is generating response
+![Stage 2](assets/Demo/mern-ai-flow-stage-2.jpeg)
 
-vite
-
-Backend
-
-express
-
-mongoose
-
-dotenv
-
-cors
-
-node-fetch
+### 🟩 Step 3 — Response ready + Save option
+![Stage 3](assets/Demo/mern-ai-flow-stage-3.jpeg)
