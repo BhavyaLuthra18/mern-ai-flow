@@ -19,37 +19,38 @@ Backend API → https://mern-ai-flow-c4dn.onrender.com
 ✔ Works on Vercel + Render
 
 🖥️ Tech Stack
+
 Frontend
 
-React (Vite)
+->React (Vite)
 
-React Flow
+->React Flow
 
-React Toastify
+->React Toastify
 
-Hosted on Vercel
-
+->Hosted on Vercel
+-----------------------------------------------------------------------------
 Backend
 
-Node.js + Express
+->Node.js + Express
 
-MongoDB + Mongoose
+->MongoDB + Mongoose
 
-OpenRouter AI API
+->OpenRouter AI API
 
-CORS
+->CORS
 
-Hosted on Render
+->Hosted on Render
 
-Database
+->Database
 
-MongoDB Atlas (Cloud)
+->MongoDB Atlas (Cloud)
 
 📂 Folder Structure
 mern-ai-flow/
  ├── client/    # React frontend
  └── server/    # Express backend
-
+---------------------------------------------------------------------
 📡 API Endpoints
 POST /api/ask-ai
 
@@ -62,7 +63,7 @@ POST /api/save-response
 Request:
 
 { "prompt": "...", "response": "..." }
-
+----------------------------------------------------------------------
 🔐 Environment Variables
 Frontend (.env)
 VITE_API_BASE_URL=https://mern-ai-flow-c4dn.onrender.com
@@ -70,7 +71,7 @@ VITE_API_BASE_URL=https://mern-ai-flow-c4dn.onrender.com
 Backend (.env)
 OPENROUTER_API_KEY=your_key
 MONGO_URI=your_mongodb_uri
-
+---------------------------------------------------------------------
 🛠️ Local Development Setup
 
 Clone the repo:
@@ -78,26 +79,23 @@ Clone the repo:
 git clone https://github.com/BhavyaLuthra18/mern-ai-flow.git
 cd mern-ai-flow
 
-
 Run frontend:
-
-cd client
-npm install
-npm run dev
-
+=>cd client
+=>npm install
+=>npm run dev
 
 Run backend:
-
 cd ../server
 npm install
 npm run dev
 
+-------------------------------------------------------------------------------------
 🌍 Deployment Info
 Service	Platform
 Frontend	Vercel
 Backend	Render
 DB	MongoDB Atlas
-
+-----------------------------------------------------------------------------------
 ## 🎬 Demo Preview
 Below is an example flow showing prompt → AI response → save action.
 
