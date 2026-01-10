@@ -22,6 +22,7 @@ function App() {
   const [response, setResponse] = useState("");
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
+  const API = import.meta.env.VITE_API_BASE_URL;
 
   // Creation of nodes and edges
   const nodes = [
@@ -54,7 +55,7 @@ function App() {
     setResponse("");
     setLoading(true);
 
-    const res = await fetch("http://localhost:5000/api/ask-ai", {
+    const res = await fetch(`${API}/api/ask-ai`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -75,7 +76,7 @@ function App() {
 
     setSaving(true);
 
-    await fetch("http://localhost:5000/api/save-response", {
+    await fetch(`${API}/api/save-response`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt, response }),
