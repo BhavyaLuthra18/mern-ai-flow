@@ -10,7 +10,6 @@ app.use(cors());
 app.use(express.json());
 
 dotenv.config();
-// console.log("API KEY:", process.env.OPENROUTER_API_KEY);
 
 mongoose
   .connect(process.env.MONGO_URI)
