@@ -83,7 +83,9 @@ VITE_API_BASE_URL=https://mern-ai-flow-c4dn.onrender.com
 Backend (.env)
 OPENROUTER_API_KEY=your_key
 MONGO_URI=your_mongodb_uri
+
 ---------------------------------------------------------------------
+
 🛠️ Local Development Setup
 
 Clone the repo:
