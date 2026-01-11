@@ -98,9 +98,9 @@ npm run dev
 -------------------------------------------------------------------------------------
 🌍 Deployment Info
 Service	Platform
-Frontend	Vercel
-Backend	Render
-DB	MongoDB Atlas
+Frontend:Vercel
+Backend:Render
+DB	MongoDB:Atlas
 -----------------------------------------------------------------------------------
 ## 🎬 Demo Preview
 Below is an example flow showing prompt → AI response → save action.
