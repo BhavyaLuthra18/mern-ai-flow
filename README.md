@@ -11,11 +11,17 @@ Backend API → https://mern-ai-flow-c4dn.onrender.com
 ✨ Features
 
 ✔ Node-based UI using React Flow
+
 ✔ AI-powered response via OpenRouter API
+
 ✔ Save prompt + response to MongoDB
+
 ✔ Fully deployed (Frontend + Backend)
+
 ✔ CORS configured
+
 ✔ Environment variable support
+
 ✔ Works on Vercel + Render
 
 🖥️ Tech Stack
@@ -107,3 +113,8 @@ Below is an example flow showing prompt → AI response → save action.
 
 ### 🟩 Step 3 — Response ready + Save option
 ![Stage 3](assets/Demo/mern-ai-flow-stage-3.jpeg)
+
+-----------------------------------------
+## 🎥 Video Walkthrough
+
+[![Watch the demo](https://img.youtube.com/vi/WdwRJ475xTo/0.jpg)](https://youtu.be/WdwRJ475xTo)
