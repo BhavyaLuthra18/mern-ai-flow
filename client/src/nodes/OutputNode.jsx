@@ -33,8 +33,6 @@ function OutputNode({ data }) {
           <ReactMarkdown>{String(data.value || "No response.")}</ReactMarkdown>
         )}
       </div>
-
-      {/**Input handle */}
       <Handle type="target" position={Position.Left} />
     </div>
   );
