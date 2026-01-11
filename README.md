@@ -96,12 +96,10 @@ npm install
 npm run dev
 
 -------------------------------------------------------------------------------------
-🌍 Deployment Info
-
-Service	Platform
-Frontend:Vercel
-Backend:Render
-DB	MongoDB:Atlas
+## 🌍 Deployment Info
+- **Frontend:** Vercel
+- **Backend:** Render
+- **Database:** MongoDB Atlas
 
 -----------------------------------------------------------------------------------
 ## 🎬 Demo Preview
