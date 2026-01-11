@@ -90,15 +90,15 @@ MONGO_URI=your_mongodb_uri
 
 Clone the repo:
 
-git clone https://github.com/BhavyaLuthra18/mern-ai-flow.git
+**git clone https://github.com/BhavyaLuthra18/mern-ai-flow.git
 cd mern-ai-flow
 
-Run frontend:
+**Run frontend:
 =>cd client
 =>npm install
 =>npm run dev
 
-Run backend:
+** Run backend:
 cd ../server
 npm install
 npm run dev
