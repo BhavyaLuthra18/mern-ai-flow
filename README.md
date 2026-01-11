@@ -24,33 +24,28 @@ Backend API → https://mern-ai-flow-c4dn.onrender.com
 
 ✔ Works on Vercel + Render
 
-🖥️ Tech Stack
+## 🖥️ Tech Stack
 
-Frontend
+**Frontend**
+- React (Vite)
+- React Flow
+- React Toastify
+- Deployed on Vercel
 
-->React (Vite)
+---
 
-->React Flow
+**Backend**
+- Node.js + Express
+- MongoDB + Mongoose
+- OpenRouter (LLM API)
+- CORS
+- Deployed on Render
 
-->React Toastify
+---
 
-->Hosted on Vercel
------------------------------------------------------------------------------
-Backend
+**Database**
+- MongoDB Atlas (Cloud)
 
-->Node.js + Express
-
-->MongoDB + Mongoose
-
-->OpenRouter AI API
-
-->CORS
-
-->Hosted on Render
-
-->Database
-
-->MongoDB Atlas (Cloud)
 
 📂 Folder Structure
 mern-ai-flow/
