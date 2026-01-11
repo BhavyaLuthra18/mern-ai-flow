@@ -47,25 +47,36 @@ Backend API → https://mern-ai-flow-c4dn.onrender.com
 - MongoDB Atlas (Cloud)
 
 
-📂 Folder Structure
+## 📂 Folder Structure
 mern-ai-flow/
  ├── client/    # React frontend
  └── server/    # Express backend
 ---------------------------------------------------------------------
-📡 API Endpoints
+
+## 📡 API Endpoints
+
 POST /api/ask-ai
+➡ Generate AI response
 
 Request:
 
-{ "prompt": "explain what is git?" }
+{ 
+"prompt": "explain what is git?"
+ }
+
 
 POST /api/save-response
+➡ Persist prompt + response to database
 
 Request:
+{
+  "prompt": "...",
+  "response": "..."
+}
 
-{ "prompt": "...", "response": "..." }
 ----------------------------------------------------------------------
-🔐 Environment Variables
+
+## 🔐 Environment Variables
 Frontend (.env)
 VITE_API_BASE_URL=https://mern-ai-flow-c4dn.onrender.com
 
